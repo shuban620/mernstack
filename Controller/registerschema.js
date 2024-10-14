@@ -3,7 +3,6 @@ import Register from "../Model/register.js";
 const registeruser = async (req, res) => {
   const { name, email, password, confirmPassword, role } = req.body;
 
-  // Validate the input fields
   if (!name || !email || !password || !confirmPassword || !role) {
     return res.json({ message: "Please provide all the required fields" });
   }
